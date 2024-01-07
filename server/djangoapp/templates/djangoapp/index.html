@@ -1,3 +1,4 @@
+<!--{% load static %}-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,9 +18,16 @@
     <!-- Remove this line the first time you edit this file -->
      This is the index page of your Django app!
     <!--Add a nav bar here -->
-
+    <nav class="navbar navbar-default">
+        <ul class="nav navbar-nav">
+            <li><a href="/djangoapp">Dealerships</a></li>
+            <li><a href="/djangoapp/about">About us</a></li>
+            <li><a href="/djangoapp/contact">Contact us</a></li>
+        </ul>
+    </nav>
     <!--Add a dealer table here -->
-
+    {% block content%}
+    {% endblock %}
     </body>
 
 </html>
