@@ -18,12 +18,28 @@
     <!-- Remove this line the first time you edit this file -->
      This is the index page of your Django app!
     <!--Add a nav bar here -->
-    <nav class="navbar navbar-default">
-        <ul class="nav navbar-nav">
-            <li><a href="/djangoapp">Dealerships</a></li>
-            <li><a href="/djangoapp/about">About us</a></li>
-            <li><a href="/djangoapp/contact">Contact us</a></li>
-        </ul>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/djangoapp">Dealerships</a>
+            </div>
+            <ul class="nav navbar-nav navbar-left">
+                <li>
+                    <a class="nav-item" href="/djangoapp/about">About us</a>
+                    <a class="nav-item" href="/djangoapp/contact">Contact us</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-left">
+                <li>
+                    <form class="form-inline" action="" method="post">
+                        <input class="form-control" type="text" placeholder="Username" name="username">
+                        <input class="form-control" type="text" placeholder="Password" name="psw">
+                        <button class="btn btn-primary" type="submit">Login</button>
+                        <a class="btn btn-link" href="">Sign Up</a>
+                    </form>
+                </li>
+            </ul>
+        </div>
     </nav>
     <!--Add a dealer table here -->
     {% block content%}
