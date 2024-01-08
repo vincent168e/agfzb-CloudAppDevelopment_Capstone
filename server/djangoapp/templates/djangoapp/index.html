@@ -21,18 +21,18 @@
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="/djangoapp">Dealerships</a>
+                <a class="navbar-brand" href="{% url 'djangoapp:index' %}">Dealerships</a>
             </div>
             <ul class="nav navbar-nav navbar-left">
                 <li>
-                    <a class="nav-item" href="/djangoapp/about">About us</a>
-                    <a class="nav-item" href="/djangoapp/contact">Contact us</a>
+                    <a class="nav-item" href="{% url 'djangoapp:about' %}">About us</a>
+                    <a class="nav-item" href="{% url 'djangoapp:contact' %}">Contact us</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 {% if user.is_authenticated %}
                 <li>
-                    <a class="btn btn-link" href="#">Username</a>
+                    <a class="btn btn-link" href="#">{{ user.username }}</a>
                     <a class="btn btn-link" href="">Logout</a>
                 </li>
                 {% else %}
