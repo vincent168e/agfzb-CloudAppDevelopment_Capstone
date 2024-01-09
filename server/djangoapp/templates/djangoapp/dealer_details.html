@@ -4,6 +4,9 @@
 <html>
 <body>
     <!-- Add reviews as cards -->
+    {% if user.is_authenticated %}
+    <a class="nav-link" href="{% url 'djangoapp:add_review' dealership.id%}">Add Review</a>
+    {% endif %}
     <div class="bg-white">
         <div class="container py-2">
             <div class="row h-25 align-items-center py-2">

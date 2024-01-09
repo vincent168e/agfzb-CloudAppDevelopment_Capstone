@@ -111,7 +111,7 @@ def add_review(request, dealer_id):
         return render(request, 'djangoapp/add_review.html', context)
     elif(request.method=="POST"):
         if(request.user.is_authenticated):
-            url = "https://vincent168e-5000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/api/psot_reviews"
+            url = "https://vincent168e-5000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/api/post_review"
             review = dict()
             review["id"] = 1
             review["dealership"] = dealer_id
